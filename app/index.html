@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>DMTool - Джадам</title>
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<style>
+		* {
+			font-family: arial;
+		}
+		.bigTable {
+			font-size: 70%;
+			width: 100%;
+		}
+		.subDetails1 {
+			margin-left: 10px;
+		}
+		footer {
+			padding-top: 50px;
+		}
+		summary {
+			font-size: 150%;
+		}
+		div {
+			border: 0px solid red;
+		}
+		.p_side {
+			display: none;
+		}
+		th {
+			text-align: center;
+		}
+		.font-100 {
+			font-size: 100%;
+		}
+		.font-70 {
+			font-size: 70%;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<h2 align="center"><a href="gremmy.html">Гремми (Оксана)</a></h2>
+			</div>
+			<div class="col-lg-3">
+				<h2 align="center"><a href="scarlet.html">Скарлет (Диана)</a></h2>
+			</div>
+		</div>
+	</div> -->
+	<div id="mainWrap" class="container">	
+		<div class="row">
+			<!-- О персонаже -->
+			<details open class="col-sm-12 col-md-6">
+				<summary>О персонаже</summary>
+				<div class="row no-gutters align-items-center">
+					<div id="charImage" class="col-sm-12 col-md-6">
+
+					</div>
+					<div id="charAboutInfo" class="col-sm-12 col-md-6">
+						
+					</div>
+				</div>
+			</details>
+			<!-- Клас и уровень -->
+			<details open class="col-sm-12 col-md-6">
+				<summary>Клас и уровень</summary>
+				<div class="row no-gutters align-items-center">
+					<div class="col-sm-12">
+						<table border="1" width="100%">
+							<tr>
+								<td colspan="2">Опыт</td>
+								<td colspan="2">192</td>
+							</tr>
+							<tr>
+								<td colspan="2">Бонус мастерства</td>
+								<td colspan="2">2</td>
+							</tr>
+						</table>
+						<br>
+						<table border="1" width="100%">
+							<tr>
+								<td>Клас</td>
+								<td>Уровень</td>
+								<td>Кость хитов</td>
+								<td>Макс хитов</td>
+							</tr>
+							<tr>
+								<td>Волшебник</td>
+								<td>1</td>
+								<td>6</td>
+								<td>8</td>
+							</tr>
+						</table>
+						<br>
+						<table border="1" width="100%">
+							<tr>
+								<th colspan="3">Черты</th>
+							</tr>
+							<tr>
+								<td>.</td>
+								<td>.</td>
+								<td>.</td>
+							</tr>
+							<tr>
+								<td>.</td>
+								<td>.</td>
+								<td>.</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</details>
+		</div>
+		<div class="row">
+			<!-- Характеристики персонажа -->
+			<details open class="col-sm-12 col-md-6">
+				<summary>Характеристики</summary>
+				<div class="row no-gutters">
+					<div id="abilityScores" class="col-sm-12">
+						
+					</div>
+				</div>
+			</details>
+			<!-- Владение навыками -->
+			<details open class="col-sm-12 col-md-6">
+				<summary>Владение навыками</summary>
+				<div class="row no-gutters">
+					<div class="col-sm-12 col-lg-6">
+						<table border="1" width="100%">
+							<thead>
+								<tr>
+									<th>Языки</th>
+									<th>Инструменты</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Общий</td>
+									<td>Жестянщика</td>
+								</tr>
+								<tr>
+									<td>Гномий</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Драконий</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Великаний</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-sm-12 col-lg-6">
+						<table border="1" width="100%">
+							<thead>
+								<tr>
+									<th>Оружие</th>
+									<th>Доспехи</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Боевые посохи</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Дротики</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Кинжалы</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Лёгкие арбалеты</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Пращи</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-sm-12 col-lg-6">
+						<table border="1" width="100%">
+							<tr>
+								<td>Уникальные способности</td>
+							</tr>
+							<tr>
+								<td>
+									<details>
+										<summary class="fontDefault">Гномья хитрость</summary>
+										<p>Вы совершаете с преимуществом спасброски Интеллекта, Мудрости и Харизмы против магии.</p>
+									</details>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<details>
+										<summary class="font-100">Магическое восстановление</summary>
+										<p class="font-70">
+											Вы знаете как восстанавливать часть магической энергии, изучая книгу заклинаний. Один раз в день, когда вы заканчиваете короткий отдых, вы можете восстановить часть использованных ячеек заклинаний. Ячейки заклинаний могут иметь суммарный уровень, который не превышает половину уровня вашего волшебника (округляя в большую сторону), и ни одна из ячеек не может быть шестого уровня или выше.
+										Например, если вы волшебник 4 уровня, вы можете восстановить ячейки заклинаний с суммой уровней не больше двух. Вы можете восстановить одну ячейку заклинаний 2 уровня, или две ячейки заклинаний 1 уровня.</p>
+									</details>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</details>
+		</div>
+		<div class="row">
+			<!-- Сражение -->
+			<details open class="col-sm-12 col-md-6">
+				<summary>Сражение</summary>
+				<div class="row no-gutters">
+					<div class="col-sm-12 col-lg-6">
+						<table border="1" width="100%">
+							<tr>
+								<th colspan="2">Боевые параметры</th>
+							</tr>
+							<tr>
+								<td>Пасивная внимательность</td>
+								<td>11</td>
+							</tr>
+							<tr>
+								<td>Темное зрение</td>
+								<td>60</td>
+							</tr>
+							<tr>
+								<td>Бонус инициативы</td>
+								<td>+1</td>
+							</tr>
+							<tr>
+								<td>Размер</td>
+								<td>Малый</td>
+							</tr>
+							<tr>
+								<td>Скорость</td>
+								<td>25</td>
+							</tr>
+							<tr>
+								<td>Клас доспеха</td>
+								<td>10</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-sm-12 col-lg-6">
+						<table border="1" width="100%">
+							<tr>
+								<th colspan="2">Спасброски</th>
+							</tr>
+							<tr>
+								<td>Сила</td>
+								<td>-1</td>
+							</tr>
+							<tr>
+								<td>Ловкость</td>
+								<td>+1</td>
+							</tr>
+							<tr>
+								<td>Телосложение</td>
+								<td>+2</td>
+							</tr>
+							<tr>
+								<td>Интеллект</td>
+								<td>+3+2=5</td>
+							</tr>
+							<tr>
+								<td>Мудрость</td>
+								<td>+1+2=5</td>
+							</tr>
+							<tr>
+								<td>Харизма</td>
+								<td>0</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-sm-12 col-lg-6">
+						<table border="1" width="100%">
+							<tr>
+								<th>Имунитеты</th>
+								<th>Сопротивления</th>
+							</tr>
+							<tr>
+								<td>нет</td>
+								<td>нет</td>
+							</tr>
+						</table>
+						<table border="1" width="100%">
+							<tr>
+								<th rowspan="2">Здоровье</th>
+								<td>Макс</td>
+								<td>Врем</td>
+								<td>Текущ</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>0</td>
+								<td>8</td>
+							</tr>
+							<tr>
+								<th colspan="4">Спасброски от смерти</th>
+							</tr>
+							<tr>
+								<td>Успех</td>
+								<td><input type="checkbox"></td>
+								<td><input type="checkbox"></td>
+								<td><input type="checkbox"></td>
+								
+							</tr>
+							<tr>
+								<td>Провал</td>
+								<td><input type="checkbox"></td>
+								<td><input type="checkbox"></td>
+								<td><input type="checkbox"></td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-sm-12 col-lg-6">
+						<table class="bigTable" border="1" width="100%">
+							<tr>
+								<th colspan="3">Оружие</th>
+							</tr>
+							<tr>
+								<td>Название</td>
+								<td>Урон</td>
+								<td>Вид урона</td>
+							</tr>
+							<tr>
+								<td>Боевой посох</td>
+								<td>1к6 (унив 1к8)</td>
+								<td>Дробящий</td>
+							</tr>
+							<tr>
+								<th colspan="3">Доспехи</th>
+							</tr>
+							<tr>
+								<td colspan="2">Название</td>
+								<td>Защита</td>
+							</tr>
+							<tr>
+								<td colspan="2">Нет</td>
+								<td>10КД</td>
+							</tr>
+							<tr>
+								<th colspan="3">Магическая фокусировка</th>
+							</tr>
+							<tr>
+								<td colspan="3">Волшебная палочка</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</details>
+			<!-- Умения и заклинания -->
+			<details open class="col-sm-12 col-md-6">
+				<summary>Умения и заклинания</summary>
+				<table border="1" width="100%">
+					<tr>
+						<td>Заговоры</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>Можно подготовить</td>
+						<td>3 (мод Инт) + 2 (ур Волш) = 5</td>
+					</tr>
+					<tr>
+						<td>Заклинания ур.1</td>
+						<td>3</td>
+					</tr>
+				</table>
+				<h3>Заговоры</h3>
+				<a href="https://tentaculus.ru/spells/index.html#q=%D1%84%D0%BE%D0%BA%D1%83%D1%81%D1%8B&view=text">Фокусы</a>
+				<br>
+				<a href="https://tentaculus.ru/spells/index.html#q=%D0%92%D0%BE%D0%BB%D1%88%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F_%D1%80%D1%83%D0%BA%D0%B0&view=text">Волшебная рука</a>
+				<br>
+				<a href="https://tentaculus.ru/spells/index.html#q=%D0%9E%D0%B3%D0%BD%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%B0&view=text">Огненная стрела</a>
+				<hr>
+				<h3>Заклинания ур.1</h3>
+				<table border="1" width="100%">
+					<thead>
+						<tr>
+							<th>Заклинание</th>
+							<th>Подготовлено</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a href="https://tentaculus.ru/spells/index.html#q=%D0%93%D1%80%D0%BE%D0%BC%D0%BE%D0%B2%D0%B0%D1%8F_%D0%B2%D0%BE%D0%BB%D0%BD%D0%B0&view=text">Громовая волна</a>
+							</td>
+							<td>+</td>
+							
+						</tr>
+						<tr>
+							<td><a href="https://tentaculus.ru/spells/index.html#q=%D0%9C%D0%B0%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%B0&view=text">Магическая стрела</a></td>
+							<td>+</td>
+						</tr>
+						<tr>
+							<td><a href="https://tentaculus.ru/spells/index.html#q=%D0%9C%D0%B5%D0%B4%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5&view=text">Медленное падение</a></td>
+							<td>+</td>
+						</tr>
+						<tr>
+							<td><a href="https://tentaculus.ru/spells/index.html#q=sleep&view=text">Сон</a></td>
+							<td>+</td>
+						</tr>
+						<tr>
+							<td><a href="https://tentaculus.ru/spells/index.html#q=%D1%82%D0%B5%D0%BD%D0%B7%D0%B5%D1%80%D0%BE%D0%B2_%D0%BF%D0%B0%D1%80%D1%8F%D1%89%D0%B8%D0%B9_%D0%B4%D0%B8%D1%81%D0%BA">Тензеров парящий диск (ритуал)</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><a href="https://tentaculus.ru/spells/index.html#q=%D0%BF%D1%80%D0%B8%D0%B7%D1%8B%D0%B2_%D1%84%D0%B0%D0%BC%D0%B8%D0%BB%D1%8C%D1%8F%D1%80%D0%B0&view=text">Призыв фамильяра</a></td>
+							<td>+</td>
+						</tr>
+					</tbody>
+				</table>
+				<hr>
+			</details>
+		</div>
+		<div class="row">
+			
+		</div>
+		<footer></footer>
+		
+		<script src="js/engineTables.js"></script>
+		<script src="js/setRace.js"></script>
+		<script src="js/Character.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+	</html>
